@@ -50,19 +50,23 @@ class App extends Component {
     top: '10%',
     right: '1%'
   }
+  const noMargin = {
+    marginTop: '0px !important'
+  }
+
 
     return(
       <div>
+        <BarraTitulo/>
         <Form 
         onCerrar={this.cerrarForm}
         visible={this.state.modal}
         onAceptar={this.aceptarRegistro}/>
-        <BarraTitulo />
         <main>
           <div className="valign-wrapper">
             <h4>Registro diario de peso</h4>
           </div>
-          <div className="row" style="margin-top: 0;">
+          <div className="row" style={noMargin}>
             <div className="col s12 m6 l6">
               <Grafica registros={this.state.registros} />
               <a className="btn" onClick={this.reiniciarRegistros}>Reiniciar Registros</a>
