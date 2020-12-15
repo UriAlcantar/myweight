@@ -54,7 +54,6 @@ class App extends Component {
     marginTop: '0px !important'
   }
 
-
     return(
       <div>
         <BarraTitulo/>
